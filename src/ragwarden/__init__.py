@@ -36,7 +36,7 @@ from ragwarden.errors import (
 from ragwarden.gate import GateRequest, agate, gate
 from ragwarden.policy import Policy
 
-__version__ = "0.3.0"
+__version__ = "0.3.1"
 
 __all__ = [
     "CallableError",

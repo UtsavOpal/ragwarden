@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ragwarden"
-version = "0.3.0"
+version = "0.3.1"
 description = "An inline hallucination gate for production RAG pipelines: atomic-claim decomposition, a cost-tiered detection cascade, and a configurable decision policy."
 readme = "README.md"
 requires-python = ">=3.10"
