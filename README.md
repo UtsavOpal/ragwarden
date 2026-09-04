@@ -25,26 +25,41 @@ the cascade degrades to a safe `ABSTAIN` instead of an unhandled exception. See
 
 ## Status
 
-**v0.3.0** — all 13 build phases complete (contracts → cascade → policy → actions → adapters →
-observability → docs → release pipeline → hardening), plus a production-hardening pass (fault
-isolation, timeouts, an async API, startup warmup). Benchmark numbers are an honest baseline, not
-yet competitive. On the path to a v1.0 that locks `ragwarden.contracts` under semver.
+**v0.3.0.** Benchmark numbers below are an honest baseline, not yet competitive. On the path to a
+v1.0 that locks `ragwarden.contracts` under semver. Full phase-by-phase build history is in
+[`CHANGELOG.md`](CHANGELOG.md).
 
-| Phase | Scope | State |
-|---|---|---|
-| 0 | Contracts + repo skeleton | done |
-| 1 | Tier 0 heuristics + policy engine + `gate()` | done |
-| 2 | Tier 1 NLI detector + real severity-weighted scoring | done |
-| 3 | Benchmark harness (RAGTruth) + calibration | done |
-| 4 | HHEM / LettuceDetect / MiniCheck detectors + ensembling | done |
-| 5 | Tier 2 uncertainty quantification (consistency sampling) | done |
-| 6 | Tier 3 LLM-as-judge + full budget-capped cascade | done |
-| 7 | Actions (redact/retry/abstain/escalate) + `action_payload` | done |
-| 8 | Retrieval adapters (OpenSearch, LangChain, Chroma, Docling, LlamaIndex) | done |
-| 9 | Observability (OTel spans + versioned JSON logs) | done |
-| 10 | MkDocs documentation site | done |
-| 11 | Packaging, security, PyPI release readiness (Trusted Publishing, SBOM, pip-audit) | done |
-| 12 | Hardening — frozen contracts, decisions documented, coverage audit, semver policy | done |
+## How it fits into your RAG pipeline
+
+RagWarden doesn't replace any part of your pipeline — it sits as one extra step between your
+generator and your user, reading what your retriever and your LLM already produced:
+
+```mermaid
+flowchart LR
+    Q[User query] --> B[Your retriever]
+    B -->|evidence chunks| C[Your LLM generator]
+    Q --> C
+    B --> D
+    C -->|draft answer| D{{"ragwarden.gate()"}}
+    D -->|ALLOW| E[Answer shown to user]
+    D -->|REDACT_CLAIMS| F[Trimmed answer shown]
+    D -->|RETRY| B
+    D -->|ABSTAIN| G[Honest non-answer shown]
+    D -->|ESCALATE| H[Queued for human review]
+```
+
+1. Your app calls **your own retriever** and **your own LLM**, exactly as it does today — RagWarden
+   never touches retrieval or generation.
+2. You hand the retrieved evidence and the generated answer to `gate()`. Internally, it decomposes
+   the answer into atomic claims and runs the cost-tiered cascade described above (Tier 0 → 1 → 2 →
+   3), stopping each claim at the cheapest tier that can confidently resolve it.
+3. `gate()` returns one of five actions, and your app branches on it: ship the answer (`ALLOW`), ship
+   a trimmed version with the unsupported sentences removed (`REDACT_CLAIMS`), loop back to your
+   retriever/generator (`RETRY`, bounded — never loops forever), say so honestly instead of guessing
+   (`ABSTAIN`), or hand it to a human reviewer with full evidence attached (`ESCALATE`).
+
+Every decision comes with `result.explanation` (why) and `result.action_payload` (structured data for
+whichever action fired) — see [Actions](docs/concepts/actions.md).
 
 ### Current baseline (honest, not competitive yet)
 
