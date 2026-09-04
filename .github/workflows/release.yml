@@ -1,0 +1,98 @@
+name: Release
+
+# Publishes to PyPI via Trusted Publishing (OIDC) — no API token stored anywhere.
+# Set up the trusted publisher on PyPI first:
+#   PyPI project -> Settings -> Publishing -> Add a new pending publisher
+#   owner: utsavopal  repo: ragwarden  workflow: release.yml  environment: pypi
+# Do the same on test.pypi.org with environment: testpypi.
+# Verify the exact steps against https://docs.pypi.org/trusted-publishers/ before first use.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Where to publish"
+        type: choice
+        options: [testpypi]
+        default: testpypi
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install build
+      - run: python -m build
+      - run: pip install twine && twine check dist/*
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
+  sbom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -e . cyclonedx-bom
+      - run: cyclonedx-py environment --output-format JSON --outfile ragwarden-sbom.cdx.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sbom
+          path: ragwarden-sbom.cdx.json
+
+  publish-testpypi:
+    needs: [build, sbom]
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/ragwarden
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    needs: [build, sbom]
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/ragwarden
+    permissions:
+      id-token: write       # Trusted Publishing + Sigstore attestations
+      contents: write       # attach artifacts to the GitHub Release
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - uses: actions/download-artifact@v4
+        with:
+          name: sbom
+          path: sbom/
+      - uses: pypa/gh-action-pypi-publish@release/v1
+        # attestations are generated and uploaded by default under Trusted Publishing
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/*
+            sbom/ragwarden-sbom.cdx.json
+          generate_release_notes: true

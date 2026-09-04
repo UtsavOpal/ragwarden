@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Docs
+site/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local model / dataset caches
+.cache/
+*.local
+
+# Release artifacts (generated in CI, attached to the GitHub Release)
+*.cdx.json
+*-sbom.*
+*.spdx.json
+
+# NOTE: benchmarks/results/ is intentionally NOT ignored (Spec Section 11).
