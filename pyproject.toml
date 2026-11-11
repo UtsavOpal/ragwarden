@@ -57,7 +57,7 @@ nli = ["transformers>=4.40", "torch>=2.1", "sentencepiece>=0.2", "protobuf>=4.0"
 # HHEM-2.1-Open ships custom `trust_remote_code` model code that is not yet
 # compatible with transformers 5.x (verified 2026-09). Re-check on the next
 # HHEM release before lifting the cap.
-hhem = ["transformers>=4.40,<5", "torch>=2.1"]
+hhem = ["transformers>=4.40,<6", "torch>=2.1"]
 lettucedetect = ["lettucedetect>=0.1.4"]
 # NOTE: there is no usable PyPI package for the MiniCheck *fact-checker* (the PyPI
 # name `minicheck` is an unrelated model-checker; `bespokelabs` is now an API
