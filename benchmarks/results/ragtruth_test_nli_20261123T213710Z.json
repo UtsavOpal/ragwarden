@@ -1,0 +1,3998 @@
+{
+  "cascade": {
+    "pct_resolved_by_tier": {
+      "1": 100.0
+    },
+    "resolved_by_tier": {
+      "1": 2096
+    },
+    "tier3_escalation_rate_pct": 0.0,
+    "total_claims_resolved": 2096
+  },
+  "dataset": "ragtruth",
+  "detector": "nli",
+  "environment": {
+    "platform": "Linux-7.0.0-1020-azure-x86_64-with-glibc2.43",
+    "python": "3.12.16"
+  },
+  "latency_ms": {
+    "max": 259820.67,
+    "mean": 57476.18,
+    "p50": 48841.12,
+    "p90": 101488.19,
+    "p99": 180719.25
+  },
+  "n_samples": 300,
+  "per_task_response_level": {
+    "Data2txt": {
+      "accuracy": 0.6477,
+      "f1": 0.7862,
+      "fn": 0,
+      "fp": 31,
+      "precision": 0.6477,
+      "recall": 1.0,
+      "support_negative": 31,
+      "support_positive": 57,
+      "tn": 0,
+      "tp": 57
+    },
+    "QA": {
+      "accuracy": 0.3363,
+      "f1": 0.3802,
+      "fn": 0,
+      "fp": 75,
+      "precision": 0.2347,
+      "recall": 1.0,
+      "support_negative": 90,
+      "support_positive": 23,
+      "tn": 15,
+      "tp": 23
+    },
+    "Summary": {
+      "accuracy": 0.3838,
+      "f1": 0.4602,
+      "fn": 1,
+      "fp": 60,
+      "precision": 0.3023,
+      "recall": 0.963,
+      "support_negative": 72,
+      "support_positive": 27,
+      "tn": 12,
+      "tp": 26
+    }
+  },
+  "policy_summary": {
+    "claim_weighting": "severity_weighted",
+    "fail_mode": "fail_closed",
+    "thresholds": {
+      "allow": 0.9,
+      "redact_claims": 0.7,
+      "retry": 0.5
+    },
+    "tier1": {
+      "confidence_threshold": 0.85,
+      "detector": "nli",
+      "enabled": true
+    },
+    "tier2_enabled": true,
+    "tier3_enabled": true
+  },
+  "ragwarden_version": "0.3.1",
+  "response_level": {
+    "accuracy": 0.4433,
+    "f1": 0.5594,
+    "fn": 1,
+    "fp": 166,
+    "precision": 0.3897,
+    "recall": 0.9907,
+    "support_negative": 193,
+    "support_positive": 107,
+    "tn": 27,
+    "tp": 106
+  },
+  "samples": [
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "1173",
+      "latency_ms": 59260.52,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8949,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2427",
+      "latency_ms": 64229.88,
+      "pred_hallucinated": true,
+      "reliability_score": 0.844,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "10114",
+      "latency_ms": 80596.65,
+      "pred_hallucinated": true,
+      "reliability_score": 0.2925,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "9914",
+      "latency_ms": 71898.08,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6332,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4480",
+      "latency_ms": 40658.18,
+      "pred_hallucinated": true,
+      "reliability_score": 0.77,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8769",
+      "latency_ms": 56238.07,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8433,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "4445",
+      "latency_ms": 64181.37,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4108,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "7065",
+      "latency_ms": 56324.9,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1836,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "7007",
+      "latency_ms": 80459.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.21,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "8936",
+      "latency_ms": 64541.24,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3814,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "8081",
+      "latency_ms": 72080.5,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5704,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "6784",
+      "latency_ms": 72142.36,
+      "pred_hallucinated": true,
+      "reliability_score": 0.644,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "7232",
+      "latency_ms": 64318.34,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "12527",
+      "latency_ms": 12051.98,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4779,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 2
+      },
+      "claims_total": 2,
+      "id": "16456",
+      "latency_ms": 8024.82,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7384,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "183",
+      "latency_ms": 79956.45,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 14
+      },
+      "claims_total": 14,
+      "id": "13230",
+      "latency_ms": 93176.96,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9345,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "8150",
+      "latency_ms": 39675.13,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 22
+      },
+      "claims_total": 22,
+      "id": "16636",
+      "latency_ms": 66693.47,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5111,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "14763",
+      "latency_ms": 28355.77,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6583,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "185",
+      "latency_ms": 144921.34,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7718,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "14284",
+      "latency_ms": 18191.4,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1397,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "2801",
+      "latency_ms": 129191.99,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9016,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "7022",
+      "latency_ms": 79993.85,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5949,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "17052",
+      "latency_ms": 44637.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8641,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "16157",
+      "latency_ms": 12559.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9636,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "9871",
+      "latency_ms": 96975.84,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3149,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "14470",
+      "latency_ms": 46213.82,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4807,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "467",
+      "latency_ms": 97225.02,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4775,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "16898",
+      "latency_ms": 57052.95,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1708,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 13
+      },
+      "claims_total": 13,
+      "id": "6785",
+      "latency_ms": 104881.38,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0572,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "8561",
+      "latency_ms": 47855.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1112,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "4074",
+      "latency_ms": 40086.05,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8784,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "2360",
+      "latency_ms": 113143.61,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7432,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "9212",
+      "latency_ms": 47890.29,
+      "pred_hallucinated": true,
+      "reliability_score": 0.329,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "332",
+      "latency_ms": 38522.56,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8621,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "17058",
+      "latency_ms": 17887.48,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7851,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 16
+      },
+      "claims_total": 16,
+      "id": "10003",
+      "latency_ms": 129493.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4688,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 15
+      },
+      "claims_total": 15,
+      "id": "8509",
+      "latency_ms": 120686.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3702,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7265",
+      "latency_ms": 47837.08,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "5687",
+      "latency_ms": 48021.61,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1631,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "6974",
+      "latency_ms": 96839.06,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4929,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "8321",
+      "latency_ms": 48075.89,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 13
+      },
+      "claims_total": 13,
+      "id": "11192",
+      "latency_ms": 105399.61,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4668,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8756",
+      "latency_ms": 56163.18,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4454,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15461",
+      "latency_ms": 15120.42,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7999,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "2737",
+      "latency_ms": 129174.23,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6908,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "613",
+      "latency_ms": 129512.81,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4884,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "10365",
+      "latency_ms": 80371.89,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4838,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "16665",
+      "latency_ms": 15156.35,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3753,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "4797",
+      "latency_ms": 31690.16,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8808,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "5087",
+      "latency_ms": 17569.78,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8018,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "8558",
+      "latency_ms": 96225.46,
+      "pred_hallucinated": true,
+      "reliability_score": 0.2944,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "17284",
+      "latency_ms": 53895.06,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9061,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "274",
+      "latency_ms": 79452.16,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5928,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "1826",
+      "latency_ms": 111836.43,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4164,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "1584",
+      "latency_ms": 17566.37,
+      "pred_hallucinated": true,
+      "reliability_score": 0.803,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15197",
+      "latency_ms": 24967.04,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5961,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 2
+      },
+      "claims_total": 2,
+      "id": "1589",
+      "latency_ms": 11852.25,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7011",
+      "latency_ms": 47954.78,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6674,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "13719",
+      "latency_ms": 66995.6,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5924,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "5739",
+      "latency_ms": 88708.14,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3149,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "582",
+      "latency_ms": 96136.66,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7369,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "11524",
+      "latency_ms": 96811.33,
+      "pred_hallucinated": true,
+      "reliability_score": 0.495,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "16506",
+      "latency_ms": 9471.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8251,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "5414",
+      "latency_ms": 30240.59,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8852,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "16902",
+      "latency_ms": 14681.84,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7652,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 14
+      },
+      "claims_total": 14,
+      "id": "6772",
+      "latency_ms": 112507.11,
+      "pred_hallucinated": true,
+      "reliability_score": 0.182,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "59",
+      "latency_ms": 144490.77,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8478,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "15483",
+      "latency_ms": 39392.12,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "12553",
+      "latency_ms": 16998.83,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "13130",
+      "latency_ms": 43532.0,
+      "pred_hallucinated": true,
+      "reliability_score": 0.984,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "964",
+      "latency_ms": 45088.36,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7957,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "2607",
+      "latency_ms": 59019.34,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8033,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "1730",
+      "latency_ms": 80288.83,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4011,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "3978",
+      "latency_ms": 48048.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8287,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "8732",
+      "latency_ms": 71386.96,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4575,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "12517",
+      "latency_ms": 14105.98,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8795,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "12765",
+      "latency_ms": 37408.77,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8496,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "13531",
+      "latency_ms": 4182.14,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "7019",
+      "latency_ms": 56038.69,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6349,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15935",
+      "latency_ms": 14440.22,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4491,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "4211",
+      "latency_ms": 15851.18,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "16900",
+      "latency_ms": 38907.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.177,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "926",
+      "latency_ms": 144531.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8129,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "1890",
+      "latency_ms": 64022.77,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "8758",
+      "latency_ms": 71684.05,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6824,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "17756",
+      "latency_ms": 21989.37,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "15924",
+      "latency_ms": 5987.91,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "12618",
+      "latency_ms": 42866.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7929,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "14849",
+      "latency_ms": 70799.74,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4085,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15344",
+      "latency_ms": 11974.83,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8922,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "14690",
+      "latency_ms": 77615.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.2582,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "6920",
+      "latency_ms": 56545.43,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3137,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "15649",
+      "latency_ms": 28391.72,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8777,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "6684",
+      "latency_ms": 72219.6,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7586,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "14775",
+      "latency_ms": 61061.26,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4828,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "15900",
+      "latency_ms": 38615.06,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8462,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "5413",
+      "latency_ms": 38298.23,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "9157",
+      "latency_ms": 97222.58,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7849,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "4016",
+      "latency_ms": 27390.47,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "12693",
+      "latency_ms": 43207.36,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5549,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "655",
+      "latency_ms": 160568.54,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4864,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "877",
+      "latency_ms": 16059.86,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7865,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "6143",
+      "latency_ms": 55956.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "6766",
+      "latency_ms": 64210.8,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3902,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "13136",
+      "latency_ms": 48841.12,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4532,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "7506",
+      "latency_ms": 64003.1,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6442,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "14748",
+      "latency_ms": 22909.72,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5042,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 16
+      },
+      "claims_total": 16,
+      "id": "1453",
+      "latency_ms": 259820.67,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5723,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "15275",
+      "latency_ms": 21337.78,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3038,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "17057",
+      "latency_ms": 38872.17,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8499,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "2674",
+      "latency_ms": 145926.1,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5407,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "9922",
+      "latency_ms": 88762.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6226,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "124",
+      "latency_ms": 25098.59,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6855,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "12067",
+      "latency_ms": 15004.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9471,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "6982",
+      "latency_ms": 64103.99,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5797,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "1518",
+      "latency_ms": 48350.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "13740",
+      "latency_ms": 12697.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9719,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 2
+      },
+      "claims_total": 2,
+      "id": "16457",
+      "latency_ms": 6881.01,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4989,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "6254",
+      "latency_ms": 71880.45,
+      "pred_hallucinated": true,
+      "reliability_score": 0.332,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "7036",
+      "latency_ms": 89097.43,
+      "pred_hallucinated": true,
+      "reliability_score": 0.558,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "2372",
+      "latency_ms": 56142.06,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9078,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "5060",
+      "latency_ms": 22841.04,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7419,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "7952",
+      "latency_ms": 80778.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3145,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "17117",
+      "latency_ms": 38842.04,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3809,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "2242",
+      "latency_ms": 96797.93,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7644,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 13
+      },
+      "claims_total": 13,
+      "id": "8665",
+      "latency_ms": 105535.97,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "4033",
+      "latency_ms": 45200.73,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9176,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "1600",
+      "latency_ms": 113914.23,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7584,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "14323",
+      "latency_ms": 23702.49,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9014,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "13938",
+      "latency_ms": 16779.35,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8534,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7235",
+      "latency_ms": 47975.41,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "483",
+      "latency_ms": 80546.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.134,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "12181",
+      "latency_ms": 51999.5,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4008,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "12518",
+      "latency_ms": 11584.82,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8936,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "16509",
+      "latency_ms": 33102.36,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1051,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15901",
+      "latency_ms": 25504.42,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4587",
+      "latency_ms": 48151.82,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9035,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "603",
+      "latency_ms": 79897.29,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6957,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "2894",
+      "latency_ms": 112797.16,
+      "pred_hallucinated": true,
+      "reliability_score": 0.614,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "6769",
+      "latency_ms": 97252.75,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6008,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "44",
+      "latency_ms": 177054.52,
+      "pred_hallucinated": true,
+      "reliability_score": 0.455,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "14691",
+      "latency_ms": 83503.01,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5165,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "6172",
+      "latency_ms": 80290.11,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0919,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "10820",
+      "latency_ms": 88866.11,
+      "pred_hallucinated": true,
+      "reliability_score": 0.852,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "5730",
+      "latency_ms": 48057.42,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5469,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2122",
+      "latency_ms": 26724.4,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8491,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "3865",
+      "latency_ms": 55896.85,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8337,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 15
+      },
+      "claims_total": 15,
+      "id": "12844",
+      "latency_ms": 136636.98,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3736,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "16904",
+      "latency_ms": 12654.12,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9455,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4261",
+      "latency_ms": 38820.84,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "13741",
+      "latency_ms": 3930.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "8909",
+      "latency_ms": 64128.74,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5009,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15007",
+      "latency_ms": 17157.75,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "7006",
+      "latency_ms": 72302.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7052,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "16894",
+      "latency_ms": 27988.2,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7289,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15481",
+      "latency_ms": 19515.53,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7025",
+      "latency_ms": 48189.0,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3314,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "15970",
+      "latency_ms": 24957.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7549,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "15009",
+      "latency_ms": 39010.21,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8644,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "14130",
+      "latency_ms": 12119.41,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8525,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "12445",
+      "latency_ms": 34517.01,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8593,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "1991",
+      "latency_ms": 6408.3,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "5059",
+      "latency_ms": 22941.86,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8955,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "10547",
+      "latency_ms": 64160.76,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6893,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4063",
+      "latency_ms": 48937.35,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7851,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 14
+      },
+      "claims_total": 14,
+      "id": "13162",
+      "latency_ms": 83384.54,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1066,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "14747",
+      "latency_ms": 24353.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.701,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "16878",
+      "latency_ms": 101488.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8974,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "4064",
+      "latency_ms": 24211.0,
+      "pred_hallucinated": true,
+      "reliability_score": 0.75,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "1828",
+      "latency_ms": 63311.34,
+      "pred_hallucinated": true,
+      "reliability_score": 0.846,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "7600",
+      "latency_ms": 98812.39,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4413,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "7002",
+      "latency_ms": 65618.36,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6262,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "13716",
+      "latency_ms": 46735.28,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8094,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "16118",
+      "latency_ms": 9193.41,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8006,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "449",
+      "latency_ms": 98939.55,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4673,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "5039",
+      "latency_ms": 29682.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6508,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "1988",
+      "latency_ms": 31276.83,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "2468",
+      "latency_ms": 81250.84,
+      "pred_hallucinated": true,
+      "reliability_score": 0.876,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "8759",
+      "latency_ms": 40213.22,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5094,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8938",
+      "latency_ms": 56632.12,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0238,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "642",
+      "latency_ms": 80473.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8934",
+      "latency_ms": 56248.33,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3168,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "9584",
+      "latency_ms": 80724.04,
+      "pred_hallucinated": true,
+      "reliability_score": 0.2958,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "5530",
+      "latency_ms": 34032.51,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5947,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "7037",
+      "latency_ms": 56327.87,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7682,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "4075",
+      "latency_ms": 55332.44,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7698,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "14210",
+      "latency_ms": 2763.99,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15927",
+      "latency_ms": 18056.22,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9473,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15755",
+      "latency_ms": 24392.81,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5849,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7017",
+      "latency_ms": 47917.41,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6731,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 20
+      },
+      "claims_total": 20,
+      "id": "12261",
+      "latency_ms": 100985.34,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1995,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "16899",
+      "latency_ms": 56952.65,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4637,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "7101",
+      "latency_ms": 55805.49,
+      "pred_hallucinated": true,
+      "reliability_score": 0.677,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "6904",
+      "latency_ms": 63957.05,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4326,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "17565",
+      "latency_ms": 21903.14,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6916,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "9215",
+      "latency_ms": 87946.68,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3444,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 28
+      },
+      "claims_total": 28,
+      "id": "12471",
+      "latency_ms": 175028.55,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6281,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "12012",
+      "latency_ms": 40137.2,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "15272",
+      "latency_ms": 4706.33,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "15673",
+      "latency_ms": 20844.16,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 2
+      },
+      "claims_total": 2,
+      "id": "17198",
+      "latency_ms": 10850.27,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9018,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "1967",
+      "latency_ms": 96478.46,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5409,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "12242",
+      "latency_ms": 19284.51,
+      "pred_hallucinated": true,
+      "reliability_score": 0.714,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "12620",
+      "latency_ms": 36226.6,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7779,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "6771",
+      "latency_ms": 39512.13,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2532",
+      "latency_ms": 64037.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7524,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2240",
+      "latency_ms": 64546.14,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6019,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "2672",
+      "latency_ms": 80099.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "13914",
+      "latency_ms": 13048.18,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "909",
+      "latency_ms": 128407.85,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5286,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "17236",
+      "latency_ms": 25242.53,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4469,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "9771",
+      "latency_ms": 47651.19,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7219,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "9161",
+      "latency_ms": 56188.23,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6174,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "844",
+      "latency_ms": 43797.32,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9336,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15774",
+      "latency_ms": 43655.1,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "4297",
+      "latency_ms": 31692.67,
+      "pred_hallucinated": true,
+      "reliability_score": 0.829,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "13535",
+      "latency_ms": 11665.55,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "6923",
+      "latency_ms": 64071.91,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0636,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "9557",
+      "latency_ms": 47685.17,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1618,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "13469",
+      "latency_ms": 32631.04,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9311,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7583",
+      "latency_ms": 47895.72,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0729,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "10710",
+      "latency_ms": 71667.3,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5778,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2443",
+      "latency_ms": 18838.4,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 14
+      },
+      "claims_total": 14,
+      "id": "13043",
+      "latency_ms": 73533.35,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3289,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "5392",
+      "latency_ms": 28468.24,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8635,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "720",
+      "latency_ms": 32924.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8672,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 17
+      },
+      "claims_total": 17,
+      "id": "13108",
+      "latency_ms": 140932.01,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4099,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "8624",
+      "latency_ms": 63780.16,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5095,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 13
+      },
+      "claims_total": 13,
+      "id": "1699",
+      "latency_ms": 208264.5,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6963,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4262",
+      "latency_ms": 38614.2,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "14505",
+      "latency_ms": 40852.66,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8206,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 21
+      },
+      "claims_total": 21,
+      "id": "12903",
+      "latency_ms": 124573.0,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3851,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "4748",
+      "latency_ms": 29644.11,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6395,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "11190",
+      "latency_ms": 63999.81,
+      "pred_hallucinated": true,
+      "reliability_score": 0.466,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "17062",
+      "latency_ms": 29746.08,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3074,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "3636",
+      "latency_ms": 79616.05,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5768,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "330",
+      "latency_ms": 23860.61,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "9874",
+      "latency_ms": 63886.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1911,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "3561",
+      "latency_ms": 96220.78,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "1001",
+      "latency_ms": 96337.23,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6685,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "15209",
+      "latency_ms": 39747.62,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6864,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "12068",
+      "latency_ms": 22678.9,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "13428",
+      "latency_ms": 59275.63,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7752,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "544",
+      "latency_ms": 96677.72,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7339,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "12044",
+      "latency_ms": 38281.81,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5425,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "3611",
+      "latency_ms": 96328.42,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8253,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "8766",
+      "latency_ms": 48116.5,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7093,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 12
+      },
+      "claims_total": 12,
+      "id": "17571",
+      "latency_ms": 64244.92,
+      "pred_hallucinated": true,
+      "reliability_score": 0.666,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "6997",
+      "latency_ms": 71528.63,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6569,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "7155",
+      "latency_ms": 64182.51,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5222,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8475",
+      "latency_ms": 55748.21,
+      "pred_hallucinated": true,
+      "reliability_score": 0.0269,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "7050",
+      "latency_ms": 63894.75,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5634,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "8783",
+      "latency_ms": 48075.44,
+      "pred_hallucinated": true,
+      "reliability_score": 0.1364,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 1
+      },
+      "claims_total": 1,
+      "id": "12619",
+      "latency_ms": 6946.66,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "7034",
+      "latency_ms": 48210.09,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3736,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "8556",
+      "latency_ms": 71827.3,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3784,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "4751",
+      "latency_ms": 30649.12,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6755,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "12912",
+      "latency_ms": 19767.49,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "16797",
+      "latency_ms": 33835.59,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4543,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "14213",
+      "latency_ms": 8880.66,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9016,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "9876",
+      "latency_ms": 64253.55,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5711,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "8663",
+      "latency_ms": 55709.41,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6362,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "13720",
+      "latency_ms": 53462.24,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4088,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "1678",
+      "latency_ms": 96706.92,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6572,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "17233",
+      "latency_ms": 20893.43,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5143,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "3812",
+      "latency_ms": 39691.95,
+      "pred_hallucinated": true,
+      "reliability_score": 0.188,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "11297",
+      "latency_ms": 48178.31,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "15107",
+      "latency_ms": 31112.86,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7217,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "9077",
+      "latency_ms": 88526.74,
+      "pred_hallucinated": true,
+      "reliability_score": 0.3665,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "2457",
+      "latency_ms": 64263.81,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7401,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "4477",
+      "latency_ms": 48858.78,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "15786",
+      "latency_ms": 23784.9,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8769,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 15
+      },
+      "claims_total": 15,
+      "id": "13563",
+      "latency_ms": 47089.68,
+      "pred_hallucinated": true,
+      "reliability_score": 0.664,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "4778",
+      "latency_ms": 48311.8,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9435,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "12845",
+      "latency_ms": 90006.45,
+      "pred_hallucinated": true,
+      "reliability_score": 0.2387,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 9
+      },
+      "claims_total": 9,
+      "id": "12297",
+      "latency_ms": 26888.17,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5799,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "3916",
+      "latency_ms": 36460.92,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7443,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "1731",
+      "latency_ms": 79962.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.25,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "1602",
+      "latency_ms": 33347.45,
+      "pred_hallucinated": false,
+      "reliability_score": 1.0,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "2876",
+      "latency_ms": 115099.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9364,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 10
+      },
+      "claims_total": 10,
+      "id": "10072",
+      "latency_ms": 82149.82,
+      "pred_hallucinated": true,
+      "reliability_score": 0.6738,
+      "task_type": "Data2txt",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "25",
+      "latency_ms": 73008.17,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8712,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "962",
+      "latency_ms": 46755.89,
+      "pred_hallucinated": true,
+      "reliability_score": 0.864,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "16893",
+      "latency_ms": 16666.94,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8957,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "3915",
+      "latency_ms": 29654.32,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7611,
+      "task_type": "Summary",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "6862",
+      "latency_ms": 66194.18,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5138,
+      "task_type": "Data2txt",
+      "true_hallucinated": true
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 11
+      },
+      "claims_total": 11,
+      "id": "1477",
+      "latency_ms": 180719.25,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4293,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "12047",
+      "latency_ms": 14666.83,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4952,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "abstain",
+      "claims_by_tier": {
+        "1": 23
+      },
+      "claims_total": 23,
+      "id": "17235",
+      "latency_ms": 72241.88,
+      "pred_hallucinated": true,
+      "reliability_score": 0.4812,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 7
+      },
+      "claims_total": 7,
+      "id": "271",
+      "latency_ms": 113210.91,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5187,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 5
+      },
+      "claims_total": 5,
+      "id": "14295",
+      "latency_ms": 26581.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5157,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "14746",
+      "latency_ms": 14804.3,
+      "pred_hallucinated": true,
+      "reliability_score": 0.637,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "retry",
+      "claims_by_tier": {
+        "1": 8
+      },
+      "claims_total": 8,
+      "id": "14052",
+      "latency_ms": 63677.28,
+      "pred_hallucinated": true,
+      "reliability_score": 0.5911,
+      "task_type": "QA",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "2740",
+      "latency_ms": 97394.18,
+      "pred_hallucinated": true,
+      "reliability_score": 0.7556,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 4
+      },
+      "claims_total": 4,
+      "id": "4301",
+      "latency_ms": 31829.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8388,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "14297",
+      "latency_ms": 16699.49,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8251,
+      "task_type": "QA",
+      "true_hallucinated": true
+    },
+    {
+      "action": "allow",
+      "claims_by_tier": {
+        "1": 6
+      },
+      "claims_total": 6,
+      "id": "1679",
+      "latency_ms": 97260.91,
+      "pred_hallucinated": true,
+      "reliability_score": 0.9178,
+      "task_type": "Summary",
+      "true_hallucinated": false
+    },
+    {
+      "action": "redact_claims",
+      "claims_by_tier": {
+        "1": 3
+      },
+      "claims_total": 3,
+      "id": "13489",
+      "latency_ms": 17155.64,
+      "pred_hallucinated": true,
+      "reliability_score": 0.8302,
+      "task_type": "QA",
+      "true_hallucinated": false
+    }
+  ],
+  "split": "test",
+  "timestamp": "2026-11-23T21:37:10.734217+00:00",
+  "unresolved_counts_as_hallucination": true
+}
